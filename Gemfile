@@ -28,9 +28,17 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Use 'devise' for authentication
+gem 'devise'
+
+# Use 'semantic ui' for styling
+gem 'semantic-ui-sass'
+
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-rails'
+  # Use 'faker' to generate data for the development and test database
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
