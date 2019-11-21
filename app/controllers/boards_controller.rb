@@ -6,6 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    @lists = @board.lists
   end
 
   def new

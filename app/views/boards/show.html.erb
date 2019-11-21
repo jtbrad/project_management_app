@@ -1,5 +1,18 @@
 <h1><%= "#{@board.title}" %></h1>
 <hr />
+<div class="ui secondary menu">
+  <%= link_to "Create New List", new_board_list_path(@board), class: "item" %>
+</div>
+<hr />
+  <div class="ui list">
+  <% @lists.each do |list| %>
+    <div class="ui card">
+      <div class="content">
+        <%= list.title %>
+      </div>
+      
+    </div>
+  <% end %>
 <hr />
 <div class="ui secondary menu">
   <%= link_to "Back To Boards", boards_path, class: "item" %>
