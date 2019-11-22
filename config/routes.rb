@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     resources :lists
   end
 
+  resources :lists do
+    resources :tasks
+  end
+
 end
