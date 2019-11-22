@@ -36,6 +36,11 @@ class ListsController < ApplicationController
 
   end
 
+  def destroy
+    @list.destroy
+    redirect_to board_path(@board)
+  end
+
   private
 
     def set_board
