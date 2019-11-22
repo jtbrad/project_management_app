@@ -1,0 +1,11 @@
+<div class="ui card">
+  <div class="content">
+    <div class="right floated meta">
+      <div class="ui secondary menu">
+        <%= link_to "Edit", edit_board_list_path(@board, list), class: "item" %>
+        <%= link_to "Delete", board_list_path(@board, list), method: :delete, class: "item" %>
+      </div>
+    </div>
+    <%= list.title %>
+  </div>
+</div>
