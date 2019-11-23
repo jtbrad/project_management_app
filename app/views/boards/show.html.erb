@@ -33,8 +33,8 @@
           <% list.tasks.order(:priority).each do |task| %>
             <%= "#{task.priority}. #{task.title}" %>
             <div class="ui secondary menu">
-              <%= link_to "Edit", edit_list_task_path(list, task), class: "item" %>
-              <%= link_to "Delete", list_task_path(list, task), method: :delete, class: "item" %>
+              <%= link_to "Edit", edit_list_task_path(list, task), class: "green item" %>
+              <%= link_to "Delete", list_task_path(list, task), method: :delete, class: "red item" %>
             </div>
           <% end %>
 
